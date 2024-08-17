@@ -20,15 +20,15 @@ function TaskItem({item,updatedTask,deleteTask}) {
     handleShowUp()
   }
   return (
-    <Card style={{maxWidth:'600px',marginTop:'20px'}}>
+    <Card style={{maxWidth:'350px',marginTop:'20px'}}>
       <Card.Header>
-        <div style={{display:'flex',gap:'9%'}}>
+        <div style={{display:'flex',gap:'9%',width:'30%',alignItems:'center'}}>
           <h6>{date}</h6>
-          <h4>{title}</h4>
+          <h4>{title.slice(0,10)}</h4>
           <div>
             {
-              complete?<h5 onClick={handleCompleted} style={{color:'green'}}>completed</h5>:
-              <h6 onClick={handleMakeComplete} style={{color:'gray'}}>make complete</h6>
+              complete?<h5 onClick={handleCompleted} style={{color:'green'}}>Done</h5>:
+              <h6 onClick={handleMakeComplete} style={{color:'gray'}}>Pending...</h6>
             }
           </div>
         </div>
