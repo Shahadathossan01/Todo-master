@@ -21,7 +21,7 @@ function NavbarHeader() {
     <div>
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="/" style={{marginLeft:'50px'}}>Task Master</Navbar.Brand>
+        <Navbar.Brand href="/" style={{marginLeft:'30px'}}>Task Master</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav style={{marginLeft:'50%'}}>

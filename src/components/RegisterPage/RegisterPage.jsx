@@ -27,29 +27,24 @@ const RegisterPage = () => {
             <h1 style={{padding:'20px'}}>Register Now</h1>
             <div style={{paddingBottom:'40px'}}>
                 <form onSubmit={handleSubmit(handleRegister)}>
-                <div>
-                    <label style={{fontSize:'30px',fontWeight:'700px'}} htmlFor='name'>Name:</label>
-                    <input style={{borderRadius:'5px',marginLeft:'50px',border:'none'}} {...register("name",{required:'This is Required!'})}  type="name" name="name" id="name" />
-                </div>
-                <span style={{color:'red'}}>{errors.name?.message}</span>
-                <div>
-                    <label style={{fontSize:'30px',fontWeight:'700px'}} htmlFor='email'>Email: </label>
-                    <input style={{borderRadius:'5px',marginLeft:'60px',border:'none'}} {...register("email",{required:'This is Required!'})} type="email" name="email" id="email" />
-                </div>
-                <div>
-                    <label style={{fontSize:'30px',fontWeight:'700px'}} htmlFor='password'>Password: </label>
-                    <input style={{borderRadius:'5px',marginLeft:'10px',border:'none'}} {...register("password",{required:'This is Required!',minLength:{
+                
+                    <input placeholder='username' style={{borderRadius:'5px',border:'none'}} {...register("name",{required:'username is required!'})}  type="name" name="name" id="name" /><br></br>
+                
+                <span style={{color:'red'}}>{errors.name?.message}</span><br />
+                
+                    <input placeholder='email' style={{borderRadius:'5px',border:'none'}} {...register("email",{required:'email is required!'})} type="email" name="email" id="email" /><br></br>
+
+                    <span style={{color:'red'}}>{errors.email?.message}</span><br />
+
+                    <input placeholder='password' style={{borderRadius:'5px',border:'none'}} {...register("password",{required:'password is required!',minLength:{
                         value:8,
                         message:"must be 8 character"
-                    }})} type="password" name="password" id="password" />
-                </div>
-                <span style={{color:'red'}}>{errors.password?.message}</span>
-                <div style={{marginRight:'240px',marginTop:'30px'}}>
-                    <Button type='submit'>Sign Up</Button>
-                </div>
+                    }})} type="password" name="password" id="password" /><br></br>
+                <span style={{color:'red'}}>{errors.password?.message}</span><br />
+                    <Button style={{marginTop:"10px",width:'185px'}} type="submit" variant="success" size="sm" >Sign Up</Button>
                 </form>
-                <div style={{marginLeft:'60%'}}>
-                    <h3>If already have an account.</h3>
+                <div style={{marginTop:'20px'}}>
+                    <h5>If already have an account.</h5>
                     <Link to='/login'><h6>Please Login!!!</h6></Link>
                 </div>
             </div>
