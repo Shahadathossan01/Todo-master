@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { AuthContext } from '../../context/AuthProvider';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function NavbarHeader() {
   const {logOut,user,setLoader}=useContext(AuthContext)
@@ -21,24 +21,20 @@ function NavbarHeader() {
     <div>
       <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="/">Task Master</Navbar.Brand>
+        <Navbar.Brand href="/" style={{marginLeft:'50px'}}>Task Master</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav style={{marginLeft:'50%'}}>
             {
-              user?.uid?<Button style={{marginLeft:'2px',marginTop:'2px'}}  onClick={handleLogOut}>Log out</Button>:<Button style={{marginLeft:'2px',marginTop:'2px'}} href="/login">Log In</Button>
+              user?.uid?<Link><Button style={{marginLeft:'10px',marginTop:'2px',}}  onClick={handleLogOut}>Log out</Button></Link>:<Link to="/login"><Button style={{marginLeft:'10px',marginTop:'2px'}} >Log In</Button></Link>
 
             }
-            <Button style={{marginLeft:'2px',marginTop:'2px'}} href="/register">Register</Button>
-          </Nav>
-          <Nav>
+            <Link to="/register">
+            <Button style={{marginLeft:'10px',marginTop:'2px'}} >Register</Button>
+            </Link>
             {
-              user?.displayName&&<Nav.Link href="#deets">{user.displayName}</Nav.Link>
+              user?.displayName&&<Nav.Link style={{color:'black',fontSize:'20px'}}>{user.displayName}</Nav.Link>
             }
-            
-            {
-              user?.photoURL&&<img style={{height:'50px',width:'50px'}} src={user?.photoURL}></img>
-            }            
           </Nav>
         </Navbar.Collapse>
       </Container>
