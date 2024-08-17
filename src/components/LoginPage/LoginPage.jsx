@@ -32,36 +32,26 @@ const LoginPage = () => {
     return (
         <div style={{textAlign:'center',backgroundColor:'AntiqueWhite'}}>
             <h1 style={{padding:'20px'}}>Please Login</h1>
-            <div style={{paddingBottom:'40px'}}>
                 <form onSubmit={handleSubmit(formHandler)}>
-                <div>
-                    <label style={{fontSize:'30px',fontWeight:'700px'}} htmlFor='email'>Email: </label>
-                    <input style={{borderRadius:'5px',marginLeft:'60px',border:'none'}} {...register('email')} type="email" name="email" id="email" />
-                </div>
-                <div>
-                    <label style={{fontSize:'30px',fontWeight:'700px'}} htmlFor='password'>Password: </label>
-                    <input style={{borderRadius:'5px',marginLeft:'10px',border:'none'}} {...register('password')} type="password" name="password" id="password" />
-                </div>
-                <div style={{marginRight:'240px',marginTop:'30px'}}>
-                    <Button type="submit">Log In</Button>
-                </div>
+                    <input placeholder="email" style={{borderRadius:'5px',border:'none'}} {...register('email')} required type="email" name="email" id="email" /><br></br><br />
+                
+                    <input required placeholder="password" style={{borderRadius:'5px',border:'none'}} {...register('password')} type="password" name="password" id="password" /><br></br>
+                    <Button style={{marginTop:"10px",width:'185px'}} type="submit" variant="success" size="sm" >Log In</Button>
+                
                 </form>
-                <div style={{display:'flex', gap:'40%',padding:' 10px 20%'}}>
+                <div style={{paddingBottom:'20px'}}>
                     <div>
-                        <h5>Login with...</h5>
-                        <span>
-                            <Button style={{marginTop:'5px',marginLeft:'5px',marginRight:'5px'}} onClick={handleGoogleLogin} className="me-1" size="sm">Google</Button>
-                            <Button style={{marginTop:'5px',marginLeft:'5px',marginRight:'5px'}} className="me-1" size="sm">Facebook</Button>
-                            <Button style={{marginTop:'5px',marginLeft:'5px',marginRight:'5px'}} size="sm">GitHub</Button>
-                            
-                        </span>
+                        <h1 style={{marginTop:'10px'}}>OR</h1>
+                        <h5>Login With...</h5>
+                            <Button variant="secondary" style={{marginTop:'5px',marginLeft:'5px',marginRight:'5px'}} onClick={handleGoogleLogin} className="me-1" size="sm">Google</Button>
+                        
                     </div>
-                    <div>
-                        <h3>If you not register</h3>
-                        <Link to='/register'><h6>Please regiter now!!!</h6></Link>
+                    <div style={{marginTop:'10px'}}>
+                        <h4>If you not register</h4>
+                        <Link to='/register'><h6>Please register now!!!</h6></Link>
                     </div>
                 </div>
-            </div>
+           
         </div>
     );
 };
