@@ -1,5 +1,3 @@
-# React + Vite
-
 #Practic Project  #(Task Master)
 
 #Key Features:-
