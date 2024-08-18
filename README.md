@@ -1,8 +1,23 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#Practic Project  #(Task Master)
 
-Currently, two official plugins are available:
+#Key Features:-
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Authentication (Login, Sing Up)  #firebase
+
+2. User can create new task Category Ways.
+
+3. The user can filter those tasks by the use of the category.
+
+4. The user can update and delete individual tasks.
+
+
+
+Tools and Language:
+
+javaScript, react, firebase
+
+
+
+#LiveLink: [https://todo-master-rouge.vercel.app/](https://todo-master-rouge.vercel.app/)
