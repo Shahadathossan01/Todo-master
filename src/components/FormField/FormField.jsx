@@ -16,8 +16,6 @@ const FormField = ({update=false, handleClose,createTask,id}) => {
         }
         
         handleClose()
-        console.log('data updated')
-
     }
     return (
         <div style={{margin:'20px',marginBottom:'20px'}}>

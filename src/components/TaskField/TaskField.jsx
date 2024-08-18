@@ -24,11 +24,10 @@ const TaskField = () => {
     const [show, setShow] = useState(false);
     const [taskField,setTaskField]=useState([])
     const [filteredArray,setFilteredArray]=useState(taskField)
-    console.log('taskfiled',taskField)
-    console.log('filteredArray',filteredArray)
+  
+    
     const {register,handleSubmit}=useForm()
-    // console.log(taskField)
-    console.log(filteredArray)
+
     useEffect(()=>{
         setFilteredArray(taskField)
     },[taskField])
@@ -77,7 +76,7 @@ const TaskField = () => {
                 </div>
             <div>
             <form onSubmit={handleSubmit((data)=>handleFilter(data))}>
-                <label style={{paddingLeft:'10px'}}><h3>Catetory:</h3></label>
+                <label style={{paddingLeft:'10px'}}><h3>Category: </h3></label>
                     <select {...register("category")}>
                         <option value="all">All</option>
                         <option value="working">Working</option>
